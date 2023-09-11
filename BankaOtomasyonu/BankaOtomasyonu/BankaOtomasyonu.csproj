@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C681857A-FDBB-4512-80E5-23AC9CCFEC5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BankaOtomasyonu</RootNamespace>
+    <AssemblyName>BankaOtomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bankaotomasyonuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankaotomasyonuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bankaotomasyonuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankaotomasyonuDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bankaotomasyonuDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankaotomasyonuDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Class.cs" />
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HesapGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HesapGoruntule.Designer.cs">
+      <DependentUpon>HesapGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KrediHesabi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KrediHesabi.Designer.cs">
+      <DependentUpon>KrediHesabi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriBilgilerSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriBilgilerSession.Designer.cs">
+      <DependentUpon>MusteriBilgilerSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriDestek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriDestek.Designer.cs">
+      <DependentUpon>MusteriDestek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriGenelislemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriGenelislemleri.Designer.cs">
+      <DependentUpon>MusteriGenelislemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musterigiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musterigiris.Designer.cs">
+      <DependentUpon>musterigiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriGoruntule.Designer.cs">
+      <DependentUpon>MusteriGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musterisayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musterisayfasi.Designer.cs">
+      <DependentUpon>musterisayfasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriSifreDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusteriSifreDegistir.Designer.cs">
+      <DependentUpon>MusteriSifreDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musteri_hesap_bilgileriRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musteri_hesap_bilgileriRapor.Designer.cs">
+      <DependentUpon>musteri_hesap_bilgileriRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnayBekleyenMusteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnayBekleyenMusteriler.Designer.cs">
+      <DependentUpon>OnayBekleyenMusteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParaCek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParaCek.Designer.cs">
+      <DependentUpon>ParaCek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParaYatır.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParaYatır.Designer.cs">
+      <DependentUpon>ParaYatır.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelEkle.Designer.cs">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGenelislem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGenelislem.Designer.cs">
+      <DependentUpon>PersonelGenelislem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelMaasYatırma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelMaasYatırma.Designer.cs">
+      <DependentUpon>PersonelMaasYatırma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="musterisifremiunuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musterisifremiunuttum.Designer.cs">
+      <DependentUpon>musterisifremiunuttum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VadeliHesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VadeliHesap.Designer.cs">
+      <DependentUpon>VadeliHesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VadesizHesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VadesizHesap.Designer.cs">
+      <DependentUpon>VadesizHesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yoneticigiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yoneticigiris.Designer.cs">
+      <DependentUpon>yoneticigiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yoneticisayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yoneticisayfasi.Designer.cs">
+      <DependentUpon>yoneticisayfasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiSifreDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiSifreDegistir.Designer.cs">
+      <DependentUpon>YoneticiSifreDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yoneticisifremiunuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yoneticisifremiunuttum.Designer.cs">
+      <DependentUpon>yoneticisifremiunuttum.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HesapGoruntule.resx">
+      <DependentUpon>HesapGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KrediHesabi.resx">
+      <DependentUpon>KrediHesabi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriBilgilerSession.resx">
+      <DependentUpon>MusteriBilgilerSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriDestek.resx">
+      <DependentUpon>MusteriDestek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriGenelislemleri.resx">
+      <DependentUpon>MusteriGenelislemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musterigiris.resx">
+      <DependentUpon>musterigiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriGoruntule.resx">
+      <DependentUpon>MusteriGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musterisayfasi.resx">
+      <DependentUpon>musterisayfasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusteriSifreDegistir.resx">
+      <DependentUpon>MusteriSifreDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musteri_hesap_bilgileriRapor.resx">
+      <DependentUpon>musteri_hesap_bilgileriRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnayBekleyenMusteriler.resx">
+      <DependentUpon>OnayBekleyenMusteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParaCek.resx">
+      <DependentUpon>ParaCek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParaYatır.resx">
+      <DependentUpon>ParaYatır.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelEkle.resx">
+      <DependentUpon>PersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGenelislem.resx">
+      <DependentUpon>PersonelGenelislem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelMaasYatırma.resx">
+      <DependentUpon>PersonelMaasYatırma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="musterisifremiunuttum.resx">
+      <DependentUpon>musterisifremiunuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VadeliHesap.resx">
+      <DependentUpon>VadeliHesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VadesizHesap.resx">
+      <DependentUpon>VadesizHesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yoneticigiris.resx">
+      <DependentUpon>yoneticigiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yoneticisayfasi.resx">
+      <DependentUpon>yoneticisayfasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiSifreDegistir.resx">
+      <DependentUpon>YoneticiSifreDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yoneticisifremiunuttum.resx">
+      <DependentUpon>yoneticisifremiunuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bankaotomasyonuDataSet.xsc">
+      <DependentUpon>bankaotomasyonuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bankaotomasyonuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankaotomasyonuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankaotomasyonuDataSet.xss">
+      <DependentUpon>bankaotomasyonuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bankaotomasyonuDataSet1.xsc">
+      <DependentUpon>bankaotomasyonuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bankaotomasyonuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankaotomasyonuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankaotomasyonuDataSet1.xss">
+      <DependentUpon>bankaotomasyonuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bankaotomasyonuDataSet2.xsc">
+      <DependentUpon>bankaotomasyonuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bankaotomasyonuDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankaotomasyonuDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankaotomasyonuDataSet2.xss">
+      <DependentUpon>bankaotomasyonuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
